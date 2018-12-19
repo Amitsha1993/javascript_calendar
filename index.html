@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <h1>Calendar</h1>
+    <div id="calender">
+        <table>
+            <thead>
+                <tr class="btn">
+                    <th>
+                        <button onClick="previousMonth()">
+                            < </button>
+                    </th>
+                    <th colspan="5" id="currentMonth"></th>
+                    <th>
+                        <button onClick="nextMonth()"> > </button>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                    <th>Sun</th>
+                </tr>
+            </thead>
+            <tbody id="CalenderBody" onclick="selectDate(event)"></tbody>
+        </table>
+        <h3>You Selected:
+            <span id="selectedItem"></span>
+        </h3>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+table,
+tr,
+td,
+th {
+    padding: 10px;
+}
+
+#CalenderBody tr,
+td {
+    border: 1px solid grey;
+    padding: 10px;
+}
+
+#calender {
+    width: 100%;
+
+}
+
+body {
+    text-align: center;
+}
+
+table {
+    margin: auto;
+    border: 1px solid #f0f0f0;
+    background-color: #f0f0f0
+}
+
+th {
+    color: green;
+    max-width: 39px;
+}
+
+
+
+.btn button {
+    color: #FF5722
+}
+
+#currentMonth {
+    color: black;
+    font-weight: bold;
+}
+
+td:active {
+    background-color: green
+}
+
+.selected {
+    background-color: green !important;
+}
+
+.disabled {
+    text-decoration: line-through;
+    color: grey
+}
+
+.enabled {
+    background-color: #d5d5d5;
+    font-weight: 800;
+
+}
+
+#selectedItem {
+    color: green;
+
+}       
