@@ -8,7 +8,7 @@ let currentDate = runningDate;
 let rootBody = document.getElementById('CalenderBody');
 const monthList = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
 document.getElementById('currentMonth').innerText = monthList[currentMonth - 1] + ', ' + currentYear;
-
+document.getElementById('currentYear').innerText = currentYear;
 // Add coloumn to row with text
 function addCols(text) {
     let tempCols = document.createElement('td');
@@ -24,7 +24,7 @@ function setMyClass(type, name) {
 
 
 //Show the calender on load of page and on click next and prev buttons
-function viewCalender(year = currentYear, month = currentMonth) {
+function viewCalender(year = runningMonth, month = runningYear) {
     document.getElementById('selectedItem').innerHTML = currentDate + '/' + monthList[currentMonth - 1] + '/' + currentYear;
     let count = netxcount = 1;
     rootBody.innerHTML = '';
@@ -77,6 +77,7 @@ function previousMonth() {
         currentMonth--
     }
     document.getElementById('currentMonth').innerText = monthList[currentMonth - 1] + ', ' + currentYear;
+    document.getElementById('currentYear').innerText = currentYear;
     viewCalender(currentYear, currentMonth)
 
 }
@@ -89,6 +90,24 @@ function nextMonth() {
     else {
         currentMonth++
     }
+    document.getElementById('currentMonth').innerText = monthList[currentMonth - 1] + ', ' + currentYear;
+    document.getElementById('currentYear').innerText = currentYear;
+    viewCalender(currentYear, currentMonth)
+}
+
+//previous Year  funciton
+function previousYear() {
+    currentYear--;
+    document.getElementById('currentYear').innerText = currentYear;
+    document.getElementById('currentMonth').innerText = monthList[currentMonth - 1] + ', ' + currentYear;
+    viewCalender(currentYear, currentMonth)
+
+}
+//Next year funciton
+function nextYear() {
+    console.log("next year", currentYear);
+    currentYear++;
+    document.getElementById('currentYear').innerText = currentYear;
     document.getElementById('currentMonth').innerText = monthList[currentMonth - 1] + ', ' + currentYear;
     viewCalender(currentYear, currentMonth)
 }
